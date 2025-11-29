@@ -1,10 +1,4 @@
 
-from bs4 import BeautifulSoup
-
-from datetime import datetime, date
-from typing import List
-
-
 class WebScraper:
     def __init__(self, url):
         self._url = url         
@@ -202,4 +196,5 @@ if __name__ == "__main__": #marcador de posición
     print("\n=== PÁRRAFOS (primeros 5) ===")
     for p in parrafos[:5]:
         print(p, "\n")
+
 
