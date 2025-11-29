@@ -2,8 +2,10 @@ from imports import *
 from driver import get_driver
 
 class WebScraper:
-    def __init__(self, url):
-        self._url = url         
+    def __init__(self, url, use_selenium=False):
+        self._url = url
+        self.use_selenium = use_selenium
+        self.driver = get_driver() if use_selenium else None
         self._html = None
         self._soup = None
 
@@ -185,6 +187,7 @@ class Event:
         self.registration_url: str = data.get("registration_url", "")
         self.description: str = data.get("description", "")
         self.scrape_date: datetime = data.get("scrape_date", datetime.now())
+
 
 
 
