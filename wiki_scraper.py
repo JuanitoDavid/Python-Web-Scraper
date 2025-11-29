@@ -1,3 +1,4 @@
+from imports import *
 
 class WebScraper:
     def __init__(self, url):
@@ -196,5 +197,6 @@ if __name__ == "__main__": #marcador de posición
     print("\n=== PÁRRAFOS (primeros 5) ===")
     for p in parrafos[:5]:
         print(p, "\n")
+
 
 
